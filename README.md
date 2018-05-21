@@ -1,7 +1,8 @@
 ## Refernce
 - Tutorial on Testing React with TDD
     - https://medium.com/tribalscale/tutorial-on-testing-react-part-1-2c587e39114d
-
+    - https://github.com/Lawton/react-testing-example
+    
 - How to build your own React boilerplate [highly recommend]
     - https://codeburst.io/how-to-build-your-own-react-boilerplate-1a97d09337fd
     - https://github.com/itzsaga/react-boilerplate-blog
