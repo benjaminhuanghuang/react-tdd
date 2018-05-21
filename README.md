@@ -7,11 +7,15 @@
 - Test-Driven Development with React, Jest, and Enzyme - Part 1 & 2
     - https://testdriven.io/tdd-with-react-jest-and-enzyme-part-one
     - https://testdriven.io/tdd-with-react-jest-and-enzyme-part-two
+    - https://github.com/calebpollman/react-calculator
 
 - Test Driven Development with React & Redux 1 & 2
     - https://www.youtube.com/watch?v=lQcIgATEKB8
     - https://www.youtube.com/watch?v=UkZTIHsZHCA
 
+- React Testing – Jest or Mocha?
+    - https://spin.atomicobject.com/2017/05/02/react-testing-jest-vs-mocha/
+    
 - How to build your own React boilerplate [highly recommend]
     - https://codeburst.io/how-to-build-your-own-react-boilerplate-1a97d09337fd
     - https://github.com/itzsaga/react-boilerplate-blog
