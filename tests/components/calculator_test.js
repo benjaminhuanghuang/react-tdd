@@ -12,10 +12,11 @@ import { Math4 as math } from '../../src/utils/math';
 describe('test addition component', () => {
   let subject;
   let mockParseEquation;
+
   beforeEach(() => {
     //Arrange
     subject = shallow(<Calculator />);
-    mockParseEquation = sinon.stub(math, "parseEquation");
+    mockParseEquation = sinon.stub(math, "parseEquation");  // replace math.parseEquation with a stub fucntion
   });
 
   afterEach(() => {
