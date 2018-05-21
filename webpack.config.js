@@ -9,7 +9,7 @@ const DEBUG = (process.argv.indexOf('--release') === -1);
 
 module.exports = {
     entry: {
-        main: './src/main.jsx'
+        main: './src/index.js'
     },
     output: {
         path: path.resolve(__dirname, "build"),

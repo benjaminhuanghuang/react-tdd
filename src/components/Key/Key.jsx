@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Key.css';
 
-const Key = ({keyAction, keyType, keyValue}) => {
+const Key = ({ keyAction, keyType, keyValue }) => {
   return (
-    <div 
+    <div
       className={`key-container ${keyType}`}
-      onClick={() => {keyAction(keyValue)}}
+      onClick={() => { keyAction(keyValue) }}
     >
       <p className="key-value">
         {keyValue}

@@ -7,14 +7,17 @@
     "dev": "webpack-dev-server --history-api-fallback --inline --progress --colors --host 0.0.0.0",
     "clean": "if [ -d \"build\" ]; then rm -r build; fi && mkdir build",
     "build": "webpack -p --progress --release",
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\"",
-    "test:single": "mocha --compilers js:babel-core/register \"tests/**/math_test.js\"",
-    "mocha:app": "mocha --compilers js:babel-core/register --require ignore-styles \"tests/**/*.spec.js\"",
+    "test": "mocha --require babel-core/register --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\"",
+    "test:single": "mocha --require babel-core/register \"tests/**/math_test.js\"",
+    "mocha:app": "mocha --require babel-core/register --require ignore-styles --require \"tests/enzyme.setup.js\" \"tests/**/App.spec.js\"",
     "jest:app": "jest \"tests/**/*.spec.js\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/benjaminhuanghuang/react-tdd.git"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./tests/enzyme.setup.js"
   },
   "keywords": [],
   "author": "",
@@ -39,8 +42,12 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.0",
     "chai": "^4.1.2",
+    "expect":"^22.4.3",
     "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
     "enzyme": "^3.3.0",
+    "react-test-renderer": "16.3.2",
+    "enzyme-adapter-react-16": "^1.1.1",
     "html-webpack-plugin": "^3.2.0",
     "ignore-styles": "^5.0.1",
     "isomorphic-fetch": "^2.2.1",
@@ -50,6 +57,7 @@
     "mocha": "^5.2.0",
     "react-addons-test-utils": "^15.6.2",
     "sass-loader": "^7.0.1",
+    "node-sass": "^4.9.0",
     "sinon": "^5.0.7",
     "unexpected": "^10.37.4",
     "unexpected-react": "^5.0.1",

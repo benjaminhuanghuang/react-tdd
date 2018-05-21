@@ -1,5 +1,8 @@
 /*
 app variables
+Since we want the variables globally available to the application, 
+we’ll define them from the :root scope. 
+The syntax for defining variables is to use custom property notation, each will begin with -- followed by the variable name. 
 */
 
 :root {
