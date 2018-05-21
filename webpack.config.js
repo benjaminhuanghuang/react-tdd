@@ -1,32 +1,36 @@
-var webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+
+var webpack = require('webpack');
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const DEBUG = (process.argv.indexOf('--release') === -1);
 
 module.exports = {
     entry: {
-        app: ['babel-polyfill', 'isomorphic-fetch', './src/main.jsx']
+        main: './src/main.jsx'
     },
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: DEBUG ? '/js/bundle.js' : '/js/bundle.[hash].js'
+        filename: DEBUG ? 'js/bundle.js' : 'js/bundle.[hash].js'
     },
-    resolve: { extensions: ['', '.js', '.jsx'] },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                use: [{ loader: 'babel-loader' }]
             },
             {
                 test: /\.(scss|css)$/,
-                loader: ExtractTextPlugin.extract('css!sass')
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader'
+                }, {
+                    loader: 'sass-loader'
+                }],
             },
             {
                 test: /\.(eot|svg|png|ttf|woff|woff2)$/,
@@ -35,7 +39,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin(DEBUG ? '/css/style.css' : '/css/style.[hash].css'),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        }),
         new webpack.DefinePlugin({
             "process.env": {
                 NODE_ENV: JSON.stringify(DEBUG ? "development" : "production")

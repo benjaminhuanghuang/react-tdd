@@ -22,5 +22,5 @@
 
 - Facebook’s Jest
 
-## Project 
+## Project boilerplate
     - https://github.com/TribalScale/react-starter-kit

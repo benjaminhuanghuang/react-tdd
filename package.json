@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --history-api-fallback --inline --progress --colors --host 0.0.0.0",
     "clean": "if [ -d \"build\" ]; then rm -r build; fi && mkdir build",
     "build": "webpack -p --progress --release",
-    "test": "node_modules/.bin/mocha --compilers js:babel-core/register --require babel-polyfill --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\""
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\""
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.0",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
@@ -50,12 +50,13 @@
     "isomorphic-fetch": "^2.2.1",
     "jsdom": "^11.10.0",
     "mocha": "^5.2.0",
-    "node-sass": "^4.9.0",
-    "react-addons-test-utils": "^15.3.2",
+    "react-addons-test-utils": "^15.6.2",
     "sass-loader": "^7.0.1",
-    "unexpected": "^10.18.1",
+    "unexpected": "^10.37.4",
     "unexpected-react": "^5.0.1",
     "webpack": "^4.8.3",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4",
+    "mini-css-extract-plugin": "^0.4.0"
   }
 }
