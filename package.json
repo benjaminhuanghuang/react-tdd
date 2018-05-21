@@ -7,7 +7,8 @@
     "dev": "webpack-dev-server --history-api-fallback --inline --progress --colors --host 0.0.0.0",
     "clean": "if [ -d \"build\" ]; then rm -r build; fi && mkdir build",
     "build": "webpack -p --progress --release",
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\""
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\"",
+    "test:single":"mocha \"tests/addition.test.js\""
   },
   "repository": {
     "type": "git",
@@ -23,33 +24,25 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "redux": "^4.0.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
-    "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.1.0",
-    "sinon": "^5.0.7"
+    "redux-thunk": "^2.1.0" 
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.0",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.8.2",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "fetch-mock": "^6.4.2",
     "html-webpack-plugin": "^3.2.0",
     "isomorphic-fetch": "^2.2.1",
     "jsdom": "^11.10.0",
     "mocha": "^5.2.0",
+    "sinon": "^5.0.7",
     "react-addons-test-utils": "^15.6.2",
     "sass-loader": "^7.0.1",
     "unexpected": "^10.37.4",
