@@ -7,6 +7,7 @@ import Keypad from '../Keypad/Keypad';
 
 describe('Calculator', () => {
   let wrapper;
+  
   beforeEach(() => {
     wrapper = shallow(<Calculator />);
   });
