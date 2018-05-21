@@ -8,7 +8,7 @@
     "clean": "if [ -d \"build\" ]; then rm -r build; fi && mkdir build",
     "build": "webpack -p --progress --release",
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\"",
-    "test:single":"mocha \"tests/addition.test.js\""
+    "test:single":"mocha --compilers js:babel-core/register --require babel-polyfill \"tests/**/math_test.js\""
   },
   "repository": {
     "type": "git",
@@ -36,12 +36,14 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.0",
+    "babel-polyfill": "^6.26.0",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "html-webpack-plugin": "^3.2.0",
     "isomorphic-fetch": "^2.2.1",
     "jsdom": "^11.10.0",
     "mocha": "^5.2.0",
+    "chai":"^4.1.2",
     "sinon": "^5.0.7",
     "react-addons-test-utils": "^15.6.2",
     "sass-loader": "^7.0.1",

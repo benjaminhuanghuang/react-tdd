@@ -7,6 +7,10 @@ Then: Sum of all numerical values should display to the right of the '=' button
 */
 import {expect} from 'chai';
 
+// import {Math0 as math} from '../../src/utils/math';
+// import {Math1 as math} from '../../src/utils/math';
+// import {Math2 as math} from '../../src/utils/math';
+// import {Math3 as math} from '../../src/utils/math';
 import {Math4 as math} from '../../src/utils/math';
 
 describe("test addition", () => {
