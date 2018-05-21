@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
 
-import Calculator from '../../src/components/calculator';
+import Calculator from '../../src/components/SimpleCalculator';
 // import {Math2 as math} from '../../src/utils/math';
 import { Math4 as math } from '../../src/utils/math';
 
