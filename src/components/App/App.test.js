@@ -10,15 +10,16 @@ describe('App', () => {
     });
 
     it('should render a <div /> - (enzme)', () => {
-        expect(wrapper.find('div').length).equal(1);
+        expect(wrapper.find('div').length).toEqual(1);
     });
 
-    // it('should render the Calculator Component', () => {
-    //     expect(wrapper.containsMatchingElement(<Calculator />)).equal(true);
-    // });
+    it('should render the Calculator Component', () => {
+        expect(wrapper.containsMatchingElement(<Calculator />)).toEqual(true);
+    });
 });
 
 import { render } from '@testing-library/react';
+
 test('renders text - (testing-library)', () => {
     const { getByText } = render(<App />);
     const linkElement = getByText(/react tdd/i);
