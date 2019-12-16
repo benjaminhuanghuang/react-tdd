@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { expect } from 'chai';      // No need this if using jest
 import App from '../../src/components/App/App';
 import Calculator from '../../src/components/Calculator/Calculator';
 

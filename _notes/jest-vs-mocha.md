@@ -32,6 +32,8 @@ it('testA', () => {
 ```
 
 ## Jest 内置 expect
+import { expect } from 'chai';      // No need to import chai if using jest
+
 ```
 it('make sure transform works', () => {
   const input = `{
