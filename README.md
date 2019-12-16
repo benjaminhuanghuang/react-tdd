@@ -30,7 +30,7 @@
 
 - React-test-renderer: Dependency library for Enzyme
 
-## Test Dependencies
+## Test Library
 - Mocha: Testing Framework, used to run tests and show the results.
 
 - Chai: Assertion Library, used to determine under what conditions a test will pass.
@@ -40,6 +40,3 @@
 - Enzyme: React Testing Utility, used to mount React components on a virtual DOM, which allows you to interact with the React component without actually rendering the component in a browser.
 
 - Facebook’s Jest
-
-## Project boilerplate
-    - https://github.com/TribalScale/react-starter-kit
