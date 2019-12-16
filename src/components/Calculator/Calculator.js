@@ -21,7 +21,7 @@ class Calculator extends Component {
     this.updateDisplay = this.updateDisplay.bind(this);
   }
   
-  componentWillMount() { 
+  componentDidMount() { 
     document.addEventListener('keydown', this.handleKeyPress);
   }
 
