@@ -28,6 +28,14 @@ And mention setupFilesAfterEnv array in a jest.config.js:
 ```
 jest runs this setup file file before each test
 
+
+To the project using "react-scripts", put 'jest' config node into package.json will cause error:
+```
+We detected setupFilesAfterEnv in your package.json.
+
+Remove it from Jest configuration, and put the initialization code in src/setupTests.js.
+This file will be loaded automatically.
+```
 ## Jest API
 - describe(name, fn)：描述块，讲一组功能相关的测试用例组合在一起
 - it(name, fn, timeout)：别名test，用来放测试用例

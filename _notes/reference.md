@@ -22,3 +22,5 @@
 
 
 - [Testing React with Jest, Enzyme, and Sinon](https://www.leighhalliday.com/testing-react-jest-enzyme-sinon)
+
+- [Revisiting React Testing in 2019] (https://codeburst.io/revisiting-react-testing-in-2019-ee72bb5346f4)

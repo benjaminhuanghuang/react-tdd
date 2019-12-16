@@ -1,4 +1,5 @@
 # Enzyme
+Enzyme 底层其实也是基于 react-test-renderer 和 react-dom/test-utils
 
 ## Tools
 - enzyme: Made by AirBnb, specifically made to help test React components
@@ -23,7 +24,7 @@ And mention setupFilesAfterEnv array in a jest.config.js:
 ```
 ## 三种渲染方法
 
-- shallow：浅渲染，是对官方的Shallow Renderer的封装。将组件渲染成虚拟DOM对象，只会渲染第一层，子组件将不会被渲染出来，使得效率非常高。不需要DOM环境， 并可以使用jQuery的方式访问组件的信息
+- shallow：浅渲染，是对官方的Shallow Renderer的封装。将组件渲染成虚拟DOM对象，只会渲染第一层，（children 中的 React 组件不会被 render），使得效率非常高。不需要DOM环境， 并可以使用jQuery的方式访问组件的信息
 
 - render：静态渲染，它将React组件渲染成静态的HTML字符串，然后使用Cheerio这个库解析这段字符串，并返回一个Cheerio的实例对象，可以用来分析组件的html结构
 
