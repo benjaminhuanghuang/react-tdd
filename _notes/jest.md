@@ -1,3 +1,33 @@
+## Jest projet structure
+
+
+## Config Jest tests
+[Configuring Jest](https://jestjs.io/docs/en/configuration)
+
+~~Create a file called setupTests.js under /src folder.~~
+
+~~And mention this file in package.json~~
+
+```
+"jest": {
+    "setupTestFrameworkScriptFile": "src/setupTests.js"
+}
+```
+For react testing, we use this setup file to setup enzyme adapter
+
+Note: setupTestFrameworkScriptFile is deprecated in favor of setupFilesAfterEnv.
+(https://jestjs.io/docs/en/configuration)
+
+Create a file like src/jest.setup.js
+
+And mention setupFilesAfterEnv array in a jest.config.js:
+```
+  module.exports = {
+    setupFilesAfterEnv: ['./jest.setup.js'],
+  };
+```
+jest runs this setup file file before each test
+
 ## Jest API
 - describe(name, fn)：描述块，讲一组功能相关的测试用例组合在一起
 - it(name, fn, timeout)：别名test，用来放测试用例

@@ -1,23 +1,25 @@
 {
   "name": "react-tdd",
   "version": "1.0.0",
-  "description": "- Tutorial on Testing React with TDD     - https://medium.com/tribalscale/tutorial-on-testing-react-part-1-2c587e39114d",
-  "main": "index.js",
+  "description": "",
   "scripts": {
-    "dev": "webpack-dev-server --history-api-fallback --inline --progress --colors --host 0.0.0.0",
-    "clean": "if [ -d \"build\" ]; then rm -r build; fi && mkdir build",
-    "build": "webpack -p --progress --release",
-    "test": "mocha --require babel-core/register --require ./tests/test_helper \"tests/**/*_test@(.js|.jsx)\"",
-    "test:single": "mocha --require babel-core/register \"tests/**/math_test.js\"",
-    "mocha:app": "mocha --require babel-core/register --require ignore-styles --require \"tests/enzyme.setup.js\" \"tests/**/App.spec.js\"",
-    "jest:app": "jest \"tests/**/*.spec.js\""
+    "start": "PORT=3721 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/benjaminhuanghuang/react-tdd.git"
   },
-  "jest": {
-    "setupTestFrameworkScriptFile": "./tests/enzyme.setup.js"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "keywords": [],
   "author": "",
@@ -27,42 +29,13 @@
   },
   "homepage": "https://github.com/benjaminhuanghuang/react-tdd#readme",
   "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "redux": "^4.0.0",
-    "react-redux": "^5.0.7",
-    "react-router": "^4.2.0",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.1.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.0",
-    "chai": "^4.1.2",
-    "expect":"^22.4.3",
-    "css-loader": "^0.28.11",
-    "style-loader": "^0.21.0",
-    "enzyme": "^3.3.0",
-    "react-test-renderer": "16.3.2",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "html-webpack-plugin": "^3.2.0",
-    "ignore-styles": "^5.0.1",
-    "isomorphic-fetch": "^2.2.1",
-    "jest": "^22.4.4",
-    "jsdom": "^11.10.0",
-    "mini-css-extract-plugin": "^0.4.0",
-    "mocha": "^5.2.0",
-    "react-addons-test-utils": "^15.6.2",
-    "sass-loader": "^7.0.1",
-    "node-sass": "^4.9.0",
-    "sinon": "^5.0.7",
-    "unexpected": "^10.37.4",
-    "unexpected-react": "^5.0.1",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.3",
-    "webpack-dev-server": "^3.1.4"
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "react-test-renderer": "^16.12.0"
   }
 }

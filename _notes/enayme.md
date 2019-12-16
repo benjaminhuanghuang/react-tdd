@@ -1,5 +1,26 @@
 # Enzyme
 
+## Tools
+- enzyme: Made by AirBnb, specifically made to help test React components
+- react-test-renderer: Enzyme requires react-test-renderer for React apps version 15.5 or greater
+- enzyme-adapter-react-16: Needed to have enzyme work with React
+- enzyme-to-json: customize how Jest serializes snapshots
+
+```
+$ npm i -D enzyme react-test-renderer enzyme-adapter-react-16
+```
+
+## Setup
+For react testing, we need to create a setup file to setup enzyme adapter.
+
+src/jest.setup.js
+
+And mention setupFilesAfterEnv array in a jest.config.js:
+```
+  module.exports = {
+    setupFilesAfterEnv: ['./jest.setup.js'],
+  };
+```
 ## 三种渲染方法
 
 - shallow：浅渲染，是对官方的Shallow Renderer的封装。将组件渲染成虚拟DOM对象，只会渲染第一层，子组件将不会被渲染出来，使得效率非常高。不需要DOM环境， 并可以使用jQuery的方式访问组件的信息
