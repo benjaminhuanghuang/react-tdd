@@ -1,14 +1,19 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import Calculator from '../Calculator/Calculator';
 
+import UserList from '../user-list/user-list';
+
 const App = () => {
   return (
-    <div className="app-container">
-      <p>React TDD</p>
-      <Calculator />
-    </div>
+    <BrowserRouter hashType="noslash">
+      <Switch>
+        <Route path="/calculator" component={Calculator}/>
+        <Route path="/userlist" component={UserList}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

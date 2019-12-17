@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getUsers } from "./actions/users";
+import { getUsers } from "../../actions/users";
 import User from "../user/user";
 
-export class App extends Component {
+export class UserList extends Component {
   render() {
     return (
       <div>
@@ -42,4 +42,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(UserList);
